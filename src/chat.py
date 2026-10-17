@@ -33,7 +33,7 @@ def main(query):
         use_jsonb=True,
     )
 
-    results = store.similarity_search_with_score(query, k=2)
+    results = store.similarity_search_with_score(query, k=10)
     context = "\n\n".join(doc.page_content.strip() for doc, _ in results)
     
     chain = search_prompt(query, context)

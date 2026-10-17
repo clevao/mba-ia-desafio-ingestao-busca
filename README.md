@@ -17,10 +17,17 @@ Para configurar o ambiente e instalar as dependências do projeto, siga os passo
    pip install -r requirements.txt
    ```
 
+2. **Subir o banco de dados com Docker**
+   ```bash
+   docker compose up -d
+   ```
+
+
 3. **Configurar as variáveis de ambiente:**
 
    - Duplique o arquivo `.env.example` e renomeie para `.env`
-   - Abra o arquivo `.env` e substitua os valores pelas suas chaves de API reais obtidas conforme instruções abaixo
+   - Abra o arquivo `.env` e substitua os valores pelas suas chaves de API reais
+   - Configure a conexão com o banco de dados nas variáveis `DATABASE_URL` e `PG_VECTOR_COLLECTION_NAME`
 
 ## Execução dos Scripts
 
